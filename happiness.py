@@ -6,7 +6,7 @@ import pandas as pd
 import altair as alt
 import os
 import toml
-# import pymysql
+import pymysql
 
 
 # # Initialize connection.
@@ -43,7 +43,7 @@ PASSWORD = toml_data['mysql']['password']
 USER = toml_data['mysql']['user']
 PORT = toml_data['mysql']['port']
 
-conn = mysql.connector.connect(
+conn = pymysql.connect(
     host=HOST_NAME,
     port=PORT,
     user=USER,

@@ -6,7 +6,7 @@ import pandas as pd
 import altair as alt
 import os
 import toml
-import pymysql
+import pymysql.cursors
 
 
 # # Initialize connection.
@@ -47,8 +47,9 @@ conn = pymysql.connect(
     host="localhost",
     port=PORT,
     user=USER,
-    passwd=PASSWORD,
-    db=DATABASE)
+    password=PASSWORD,
+    db=DATABASE,
+    cursorclass=pymysql.cursors.DictCursor)
 
 df = pd.read_sql_query("SELECT * FROM `2015`",
     conn)

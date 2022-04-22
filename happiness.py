@@ -39,7 +39,7 @@ user = os.getenv('MYSQL_USER')
 password = "mango123"
 database = os.getenv('MYSQL_DATABASE')
 
-conn = mysql.connector.connect.connect(
+conn = mysql.connector.connect(
     host=host,
     port=int(3306),
     user="root",

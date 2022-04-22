@@ -12,7 +12,8 @@ import altair as alt
 def init_connection():
     return  mysql.connector.connect(host="localhost", user="root",
         password="mango123",
-        database="happiness"
+        database="happiness",
+        port = 3306
         )
 
 conn = init_connection()

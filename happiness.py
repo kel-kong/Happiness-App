@@ -33,18 +33,21 @@ import os
 # for row in rows:
 #     st.write(f"{row[0]} has a :{row[1]}:")
 
-host = os.getenv('MYSQL_HOST')
-port = os.getenv('MYSQL_PORT')
-user = os.getenv('MYSQL_USER')
-password = "mango123"
-database = os.getenv('MYSQL_DATABASE')
+# Reading data
+toml_data = toml.load("secrets.toml")
+# saving each credential into a variable
+HOST_NAME = toml_data['mysql']['host']
+DATABASE = toml_data['mysql']['database']
+PASSWORD = toml_data['mysql']['password']
+USER = toml_data['mysql']['user']
+PORT = toml_data['mysql']['port']
 
 conn = mysql.connector.connect(
     host=host,
-    port=int(3306),
-    user="root",
-    passwd=password,
-    db="happiness",
+    port=PORT,
+    user=USER,
+    passwd=PASSWORD,
+    db=DATABASE,
     charset='utf8mb4')
 
 df = pd.read_sql_query("SELECT * FROM `2015`",

@@ -44,7 +44,7 @@ USER = toml_data['mysql']['user']
 PORT = toml_data['mysql']['port']
 
 conn = pymysql.connect(
-    host="root",
+    host="localhost",
     port=PORT,
     user=USER,
     passwd=PASSWORD,

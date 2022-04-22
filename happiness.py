@@ -5,7 +5,7 @@ import mysql.connector
 import pandas as pd
 import altair as alt
 import os
-import pymysql
+# import pymysql
 
 
 # # Initialize connection.
@@ -39,7 +39,7 @@ user = os.getenv('MYSQL_USER')
 password = "mango123"
 database = os.getenv('MYSQL_DATABASE')
 
-conn = pymysql.connect(
+conn = mysql.connector.connect.connect(
     host=host,
     port=int(3306),
     user="root",

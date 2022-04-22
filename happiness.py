@@ -45,7 +45,7 @@ PORT = toml_data['mysql']['port']
 
 conn = pymysql.connect(
     host="127.0.0.1",
-    port=PORT,
+    port=int(3306),
     user=USER,
     password=PASSWORD,
     db=DATABASE,

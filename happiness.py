@@ -48,8 +48,7 @@ conn = pymysql.connect(
     port=PORT,
     user=USER,
     passwd=PASSWORD,
-    db=DATABASE,
-    charset='utf8mb4')
+    db=DATABASE)
 
 df = pd.read_sql_query("SELECT * FROM `2015`",
     conn)

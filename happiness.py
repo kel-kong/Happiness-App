@@ -10,7 +10,7 @@ import altair as alt
 # Uses st.experimental_singleton to only run once.
 @st.experimental_singleton
 def init_connection():
-    return  mysql.connector.connect(host="127.0.0.1", port = 3306, user="root",
+    return  mysql.connector.connect(host="localhost", port = 3306, user="root",
         password="mango123",
         database="happiness"
         )

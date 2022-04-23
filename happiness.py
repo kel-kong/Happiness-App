@@ -9,16 +9,16 @@ import toml
 import pymysql.cursors
 
 
-# # Initialize connection.
-# # Uses st.experimental_singleton to only run once.
-# @st.experimental_singleton
-# def init_connection():
-#     return  mysql.connector.connect(host="localhost", port = 3306, user="root",
-#         password="mango123",
-#         database="happiness"
-#         )
+# Initialize connection.
+# Uses st.experimental_singleton to only run once.
+@st.experimental_singleton
+def init_connection():
+    return  mysql.connector.connect(host="localhost", port = 3306, user="root",
+        password="mango123",
+        database="happiness"
+        )
 
-# conn = init_connection()
+conn = init_connection()
 
 # # Perform query.
 # # Uses st.experimental_memo to only rerun when the query changes or after 10 min.

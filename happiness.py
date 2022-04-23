@@ -55,5 +55,5 @@ import pymysql.cursors
 #     conn)
 # df.tail(10)
 
-year = st.slider("Select which year:", value = 2015, 2019, 1)
+year = st.slider("Select which year:", 2015, 2019, 1)
 st.write("Year", year)

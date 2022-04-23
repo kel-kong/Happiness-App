@@ -55,5 +55,9 @@ import pymysql.cursors
 #     conn)
 # df.tail(10)
 
-year = st.slider("Select which year:", min_value = 2015, max_value = 2019, step = 1)
-st.write("Year", year)
+starting_year = st.slider("Select starting year:", min_value = 2015, max_value = 2019, step = 1)
+ending_year = st.slider("Select ending year:", min_value = 2015, max_value = 2019, step = 1)
+st.write("Starting Year", starting_year)
+st.write("Ending Year", ending_year)
+
+

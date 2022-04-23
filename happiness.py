@@ -34,23 +34,26 @@ import pymysql.cursors
 # for row in rows:
 #     st.write(f"{row[0]} has a :{row[1]}:")
 
-# Reading data
-toml_data = toml.load("secrets.toml")
-# saving each credential into a variable
-HOST_NAME = toml_data['mysql']['host']
-DATABASE = toml_data['mysql']['database']
-PASSWORD = toml_data['mysql']['password']
-USER = toml_data['mysql']['user']
-PORT = toml_data['mysql']['port']
+# # Reading data
+# toml_data = toml.load("secrets.toml")
+# # saving each credential into a variable
+# HOST_NAME = toml_data['mysql']['host']
+# DATABASE = toml_data['mysql']['database']
+# PASSWORD = toml_data['mysql']['password']
+# USER = toml_data['mysql']['user']
+# PORT = toml_data['mysql']['port']
 
-conn = pymysql.connect(
-    host=HOST_NAME,
-    port=int(3306),
-    user=USER,
-    password=PASSWORD,
-    db=DATABASE,
-    cursorclass=pymysql.cursors.DictCursor)
+# conn = pymysql.connect(
+#     host=HOST_NAME,
+#     port=int(3306),
+#     user=USER,
+#     password=PASSWORD,
+#     db=DATABASE,
+#     cursorclass=pymysql.cursors.DictCursor)
 
-df = pd.read_sql_query("SELECT * FROM `2015`",
-    conn)
-df.tail(10)
+# df = pd.read_sql_query("SELECT * FROM `2015`",
+#     conn)
+# df.tail(10)
+
+year = st.slider("Select which year:", value = 2015, 2019, 1)
+st.write("Year", year)

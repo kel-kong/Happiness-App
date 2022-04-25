@@ -61,16 +61,15 @@ country_region = st.radio("Choose your player:", ['Country', 'Region'])
 if country_region == "Country":
 	# countries_df = pd.read_sql_query("SELECT DISTINCT `Country` FROM `happiness`.`2015` ORDER BY `Country` ASC;", conn)
 	# countries_list = df['Country'].to_list()
-	# country = st.selectbox("Select a country:", countries_list)
-	country = "Switzerland"
+	countries_list = ['Deez', 'Nuts']
+	country = st.selectbox("Select a country:", countries_list)
 	st.write("Country", country)
 
 elif country_region == "Region":
 	# regions_df = pd.read_sql_query("SELECT DISTINCT `Region` FROM `happiness`.`2015` ORDER BY `Region` ASC;", conn)
 	# regions_list = regions_df['Region'].to_list()
-	# regions_list.append("None")
-	# region = st.selectbox("Select a region to get the average:", regions_list
-	region = "North America"
+	regions_list = ['Ima', 'Break', 'Down']
+	region = st.selectbox("Select a region to get the average:", regions_list)
 	st.write("Region", region)
 
 starting_year = st.slider("Select starting year:", min_value = 2015, max_value = 2019, step = 1)

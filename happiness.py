@@ -56,7 +56,7 @@ import pymysql.cursors
 # df.tail(10)
 
 # TITLE 
-st.title("Kelly's Function **but** Non-Functional Happiness App")
+st.title("Kelly's Function *but* Non-Functional Happiness App 🫠")
 # makes the slider for the user to choose country, starting year, ending year, and/or region
 # to get country options: get unique values of countries
 country_region = st.radio("Choose your player:", ['Country', 'Region'])

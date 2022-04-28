@@ -6,6 +6,7 @@ import altair as alt
 import os
 import toml
 import pymysql
+import mysql.connector
 
 
 # Reading data
@@ -17,13 +18,19 @@ PASSWORD = toml_data['mysql']['password']
 USER = toml_data['mysql']['user']
 PORT = toml_data['mysql']['port']
 
-conn = pymysql.connect(
-    host= "localhost", #"localhost"
-    port= 3306, 
-    user= "root", #"root"
-    password= "cricket123",
-    db= "happiness", #"Happiness"
-    )
+# conn = pymysql.connect(
+#     host= "localhost", #"localhost"
+#     port= 3306, 
+#     user= "root", #"root"
+#     password= "cricket123",
+#     db= "happiness", #"Happiness"
+#     )
+
+conn = mysql.connector.connect(
+	host = "localhost", 
+	user = "root",
+	passwd = "cricket123",
+	database = "happiness")
 
 df = pd.read_sql_query("SELECT * FROM happiness.`2015`", conn)
 df.tail(10)

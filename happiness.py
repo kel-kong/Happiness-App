@@ -5,7 +5,7 @@ import pandas as pd
 import altair as alt
 import os
 import toml
-import pymysql.cursors
+import pymysql
 
 
 # Reading data
@@ -23,7 +23,7 @@ conn = pymysql.connect(
     user=USER, #"root"
     password=PASSWORD,
     db=DATABASE, #"Happiness"
-    cursorclass=pymysql.cursors.DictCursor)
+    )
 
 df = pd.read_sql_query("SELECT * FROM happiness.`2015`", conn)
 df.tail(10)

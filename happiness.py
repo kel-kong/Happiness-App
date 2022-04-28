@@ -18,11 +18,11 @@ USER = toml_data['mysql']['user']
 PORT = toml_data['mysql']['port']
 
 conn = pymysql.connect(
-    host=HOST_NAME, #"localhost"
-    port=int(3306), 
-    user=USER, #"root"
-    password=PASSWORD,
-    db=DATABASE, #"Happiness"
+    host= "localhost", #"localhost"
+    port= 3306, 
+    user= "root", #"root"
+    password= "cricket123",
+    db= "happiness", #"Happiness"
     )
 
 df = pd.read_sql_query("SELECT * FROM happiness.`2015`", conn)

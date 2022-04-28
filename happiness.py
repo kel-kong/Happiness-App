@@ -30,7 +30,7 @@ conn = mysql.connector.connect(
 	host = "localhost", 
 	user = "root",
 	passwd = "cricket123",
-	database = "happiness")
+	database = "streamlit")
 
 df = pd.read_sql_query("SELECT * FROM happiness.`2015`", conn)
 df.tail(10)

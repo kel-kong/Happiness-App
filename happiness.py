@@ -27,7 +27,7 @@ PORT = toml_data['mysql']['port']
 #     )
 
 conn = mysql.connector.connect(
-	host = "192.168.1.162", 
+	host = "localhost", 
 	user = "root",
 	passwd = "cricket123",
 	database = "happiness")

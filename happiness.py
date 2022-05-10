@@ -43,7 +43,7 @@ st.subheader("A Functional **_but_** Non-Functional App 🤠")
 starting_year = st.slider("Select starting year:", min_value = 2015, max_value = 2019, step = 1)
 ending_year = st.slider("Select ending year:", min_value = 2015, max_value = 2019, step = 1)
 
-country_region = st.radio("Choose your the area type:", ['Country', 'Region'])
+country_region = st.radio("Choose the area type:", ['Country', 'Region'])
 if country_region == "Country":
 	# countries_df = pd.read_sql_query("SELECT DISTINCT `Country` FROM `happiness`.`2015` ORDER BY `Country` ASC;", conn)
 	# countries_list = df['Country'].to_list()

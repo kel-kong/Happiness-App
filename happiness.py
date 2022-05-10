@@ -41,7 +41,7 @@ st.subheader("A Functional **_but_** Non-Functional App 🤠")
 # makes the slider for the user to choose country, starting year, ending year, and/or region
 # to get country options: get unique values of countries
 starting_year = st.slider("Select starting year:", min_value = 2015, max_value = 2019, step = 1)
-ending_year = st.slider("Select ending year:", min_value = 2015, max_value = 2019, step = 1)
+ending_year = st.slider("Select ending year:", min_value = 2016, max_value = 2019, step = 1)
 
 country_region = st.radio("Choose the area type:", ['Country', 'Region'])
 if country_region == "Country":

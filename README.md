@@ -16,7 +16,7 @@ Happiness.ipynb
 - this is a notebook containing the code that would imitate the app's functions (happiness.py)
 
 README.md
-- what you are currently reading that details the whole projects
+- what you are currently reading that details the whole project
 
 happiness.py 
 - this .py file is what is used to create the interface of the app through Streamlit

@@ -4,7 +4,7 @@ This project uses the World Happiness Reports for the years 2015 - 2019, to crea
 
 If country is selected, the results would be the Rank Difference for that selected country between the two year selected. In contrast, if region is selected, the results would display the average Rank Difference of countries within the selected region. 
 
-To further dive into the data, a dataset will be displayed showing the Country, Rank Difference, Happiness Score Difference, Economic Difference, Health Difference, Freedom Difference, and lastly Governmental Difference for the selected years. To help the user visualize these differences, there will be an interactive graph shown that will plot the scores for each category for those two years. To select one category you click on the coloor-coordinated tiles on the left legend, and to select multiple you hold shift while selecting the wanted categories. 
+To further dive into the data, a dataset will be displayed showing the Country, Rank Difference, Happiness Score Difference, Economic Difference, Health Difference, Freedom Difference, and lastly Governmental Difference for the selected years. To help the user visualize these differences, there will be an interactive graph shown that will plot the scores for each category for those two years. To select one category you click on the color-coordinated tiles on the left legend, and to select multiple you hold shift while selecting the wanted categories. 
 
 
 ## Built With

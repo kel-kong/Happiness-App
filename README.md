@@ -47,7 +47,7 @@ Video reference to download MySQL:
 https://www.youtube.com/watch?v=n1zT1OZcgnw&ab_channel=99MasterClass
 
 Some of the websites referred to (in attempt to fix connectivity issue): 
-https://jennyttt.medium.com/the-solution-to-cant-connect-to-mysql-server-on-xxxxx-2fe7d4e1d460
+https://jennyttt.medium.com/the-solution-to-cant-connect-to-mysql-server-on-xxxxx-2fe7d4e1d460, 
 https://sebhastian.com/mysql-fix-secure-file-priv-error/
 
 Video reference explaining the app and the process of making it: 

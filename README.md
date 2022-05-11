@@ -27,12 +27,12 @@ requirements.txt, secrets.toml
 ## Pre-Process: 
 I will now be going into the process and challenges that I encountered while working on this project.
 
-In order to download MySQL I had to use a community download since I do not have a Windows machine. Through this community download, I watched a Youtube tutorial and followed the additional needed steps of adding a bash profile. After that, I examined the dataset and from the hint given, I noticed that each year had different columns and column names. I found the columns that all the years ('15-'19) had in common, which were: Country, Happiness Rank, Happiness Score, Economy (GDP), Health (life expectancy), Freedom, and Government and changed their names to make it easier to work with. Next, when working with region, I realized that the years 2017-2019 did no have a regions column. Because 2015 had the most amount of countries, I used the year 2015 as a key for mapping regions to countries.
+In order to download MySQL I had to use a community download since I do not have a Windows machine. Through this community download, I watched a Youtube tutorial and followed the additional needed steps of adding a bash profile. After that, I examined the dataset and from the hint given, I noticed that each year had different columns and column names. I found the columns that all the years ('15-'19) had in common, which were: Country, Happiness Rank, Happiness Score, Economy (GDP), Health (life expectancy), Freedom, and Government and changed their names to make it easier to work with. Next, when working with region, I realized that the years 2017-2019 did not have a regions column. Because 2015 had the most amount of countries, I used the year 2015 as a key for mapping regions to countries.
 
 I used the following query to get the country/region key:
 "SELECT DISTINCT Country, Region FROM `happiness`.`2015` ORDER BY `Country` ASC"
 
-I then downloaded the .csv and uploaded the years with the missing region along with the key to map it. 
+I then downloaded the .csv and uploaded the years with the missing region along with the key to map it using Excel. 
 To do this I used VLOOKUP to create a new column, region: 
 "VLOOKUP(B2, Region_Key!$A$2:$C$159, 2, 1)"
 
